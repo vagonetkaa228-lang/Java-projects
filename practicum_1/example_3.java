@@ -1,4 +1,4 @@
-
+package practicum_1;
 
 import java.util.Scanner;
 //Вариант 7

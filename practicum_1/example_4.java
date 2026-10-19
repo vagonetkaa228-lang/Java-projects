@@ -1,3 +1,5 @@
+package practicum_1;
+
 import java.util.Scanner;
 
 public class example_4 {
