@@ -94,7 +94,7 @@ public class example_1 {
                 if ((r == 0 || r == h - 1 || c == 0 || c == w - 1) && grid[r][c] == '.') {
                     int id = r * w + c;
 
-                    // Используем метод isReachable() из BFSResult препода
+                    // Используем метод isReachable() из BFSResult
                     if (bfs.isReachable(id)) {
                         int dist = bfs.distanceTo(id);
                         if (dist < minDistance) {
@@ -112,7 +112,7 @@ public class example_1 {
         } else {
             System.out.println("Расстояние: " + minDistance);
 
-            // ПОЛУЧАЕМ ПУТЬ С ПОМОЩЬЮ МЕТОДА pathTo() ПРЕПОДАВАТЕЛЯ
+            // ПОЛУЧАЕМ ПУТЬ С ПОМОЩЬЮ МЕТОДА pathTo() 
             List<Integer> pathIds = bfs.pathTo(bestExitId);
             List<String> pathCoords = new ArrayList<>();
 
