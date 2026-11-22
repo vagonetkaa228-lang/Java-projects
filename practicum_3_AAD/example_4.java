@@ -29,7 +29,7 @@ public class example_4 {
             graph.addEdge(u, v, 1);
         }
 
-        // 3. ЗАПУСКАЕМ АЛГОРИТМ ПРЕПОДАВАТЕЛЯ
+        // 3. ЗАПУСКАЕМ АЛГОРИТМ 
         TopologicalSortResult result = TopologicalSort.sort(graph);
 
         // 4. Проверяем, есть ли цикл
