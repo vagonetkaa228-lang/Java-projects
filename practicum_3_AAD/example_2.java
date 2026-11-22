@@ -10,7 +10,7 @@ import practicum_3_AAD.Dop.BinaryMinHeap;
 public class example_2 {
 
     // Вспомогательный класс для хранения пары (вершина, расстояние).
-    // Он нужен, чтобы класть эти пары в кучу преподавателя.
+    // Он нужен, чтобы класть эти пары в кучу 
     static class State {
         int vertex;
         long dist;
@@ -42,14 +42,14 @@ public class example_2 {
             graph.addEdge(u, v, w); // Добавляем ребро
         }
 
-        // 3. Подготовка массивов для Дейкстры (наша логика)
+        // 3. Подготовка массивов для Дейкстры 
         long INF = Long.MAX_VALUE;
         long[] dist1 = new long[n]; // Самый короткий путь
         long[] dist2 = new long[n]; // Второй по короткости
         Arrays.fill(dist1, INF);
         Arrays.fill(dist2, INF);
 
-        // 4. ИСПОЛЬЗУЕМ КУЧУ ПРЕПОДАВАТЕЛЯ (BinaryMinHeap)
+        // 4. ИСПОЛЬЗУЕМ КУЧУ  (BinaryMinHeap)
         // Передаем компаратор, который говорит куче: "сначала отдавай тот State, где dist меньше"
         BinaryMinHeap<State> pq = new BinaryMinHeap<>(
                 Comparator.comparingLong(state -> state.dist)
@@ -59,7 +59,7 @@ public class example_2 {
         dist1[s] = 0;
         pq.add(new State(s, 0));
 
-        // 5. Модифицированный алгоритм Дейкстры (наша логика)
+        // 5. Модифицированный алгоритм Дейкстры 
         while (!pq.isEmpty()) {
             State curr = pq.removeMin(); // Достаем минимальный элемент из кучи
             long d = curr.dist;
