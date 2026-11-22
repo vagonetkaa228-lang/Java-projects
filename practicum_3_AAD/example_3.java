@@ -18,7 +18,7 @@ public class example_3 {
         int n = scanner.nextInt(); // Количество вершин (городов)
         int m = scanner.nextInt(); // Количество ребер (возможных кабелей)
 
-        // 1. ИСПОЛЬЗУЕМ ГРАФ ПРЕПОДАВАТЕЛЯ для списка ребер
+        // 1. ИСПОЛЬЗУЕМ ГРАФ  для списка ребер
         // directed = false, так как кабель можно тянуть в обе стороны
         EdgeGraph graph = new EdgeListGraph(n, false);
 
@@ -42,7 +42,7 @@ public class example_3 {
             }
         }
 
-        // 5. Вывод результата (как просят в задании)
+        
         System.out.println("maxSelected = " + maxWeight);
     }
 }
